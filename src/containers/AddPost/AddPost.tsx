@@ -7,14 +7,14 @@ const AddPost: React.FC = () => {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
-    const onChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setPost((prev) => ({
             ...prev,
             [e.target.name]: e.target.value,
         }));
-    }, []);
+    };
 
-    const onSubmit = useCallback((e: React.FormEvent) => {
+    const onSubmit = useCallback(async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
 

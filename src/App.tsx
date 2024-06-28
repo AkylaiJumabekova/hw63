@@ -4,6 +4,7 @@ import Toolbar from './components/Toolbar/Toolbar';
 import Home from './containers/Home/Home';
 import AddPost from './containers/AddPost/AddPost';
 import EditPost from './containers/EditPost/EditPost';
+import PostDetails from './containers/PostDetails/PostDetails';
 import About from './containers/About/About';
 import Contacts from './containers/Contacts/Contacts';
 
@@ -18,6 +19,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/new-post" element={<AddPost />} />
           <Route path="/posts/:id/edit" element={<EditPost />} />
+          <Route path="/posts/:id" element={<PostDetails />} /> 
           <Route path="/about" element={<About />} />
           <Route path="/contacts" element={<Contacts />} />
         </Routes>
